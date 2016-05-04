@@ -2,8 +2,7 @@
 layout: post
 title:  "Tennis stats"
 date:   2016-05-01 10:38:27
-tags: r tennis statistics
-categories: experiments
+tags: experiments r tennis statistics
 ---
 
 I came across [Tennis-data](http://www.tennis-data.co.uk/) while random-browsing and I thought it would make the perfect data set to experiment with [R](https://www.r-project.org/).
