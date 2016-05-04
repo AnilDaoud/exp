@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Pimping Jekyll"
-date:   2016-05-2 10:38:27
+date:   2016-05-02 10:38:27
 tags: Jekyll
 ---
 
