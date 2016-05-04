@@ -8,4 +8,10 @@ github_username:  anildaoud
 
 # Build settings
 markdown: kramdown
-permalink: /blog/:year/:month/:day/:title/
+permalink: /:year/:month/:day/:title/
+
+blog:
+  tags:
+    url: /tags
+    title_prefix: "Tag: "
+    layout: tag.html
