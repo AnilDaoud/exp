@@ -2,7 +2,7 @@
 layout: post
 title:  "懐かしい"
 date:   2016-05-04 10:38:27
-tags: vimeo,tokyo,japan
+tags: vimeo tokyo japan
 categories: experiences
 ---
 

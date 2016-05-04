@@ -2,7 +2,7 @@
 layout: post
 title:  "Tennis stats"
 date:   2016-05-01 10:38:27
-tags: r,tennis,statistics
+tags: r tennis statistics
 categories: experiments
 ---
 

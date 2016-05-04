@@ -2,7 +2,7 @@
 layout: post
 title: MrHyde post
 date:   2016-05-04 20:38:27
-tags: Jekyll,git
+tags: Jekyll git
 categories: experiments
 ---
 
