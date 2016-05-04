@@ -10,8 +10,6 @@ github_username:  anildaoud
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
 
-blog:
-  tags:
-    url: /tags
-    title_prefix: "Tag: "
-    layout: tag.html
+tags_url: /tags
+tags_title_prefix: "Tag: "
+tags_layout: tag.html
