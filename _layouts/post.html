@@ -13,3 +13,16 @@ layout: default
   </article>
 
 </div>
+
+<div style="display:block; width:auto; overflow:hidden;">
+ {% if page.previous.url %}
+   <a style="display:block; float:left; width:50%; text-align:left;" href="{{page.previous.url | prepend: site.baseurl}}">« {{page.previous.title}}</a>
+ {% else %}
+<p style="display:block; float:left; width:50%;">First post</p> 
+{% endif %} 
+ {% if page.next.url %}
+  <a style="display:block; float:left; width:50%; text-align:right;" href="{{page.next.url | prepend: site.baseurl}}">{{page.next.title}} &raquo;</a>
+ {% endif %}
+</div>
+
+{% include comments.html %}
