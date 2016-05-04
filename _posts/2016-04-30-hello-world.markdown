@@ -3,6 +3,7 @@ layout: post
 title:  "Hello World!"
 date:   2016-04-30 10:38:27
 tags: firstpost,jekyll
+categories: experiments
 ---
 
 First post! I'll post random bits and pieces on this site.

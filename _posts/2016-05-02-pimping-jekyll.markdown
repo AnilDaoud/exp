@@ -3,6 +3,7 @@ layout: post
 title:  "Pimping Jekyll"
 date:   2016-05-02 10:38:27
 tags: Jekyll
+categories: experiments
 ---
 
 So, three posts in three days. So far I love Jekyll, it is easy to customize. To wit, here are a few examples of what you can tweak.
