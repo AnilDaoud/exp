@@ -18,6 +18,6 @@ The next difficulty is that the SimpleBlobDetector function is not present in Op
 
 Next I needed a javascript framework. Between Angular, Bootstrap, etc. it is easy to get lost. In the end, jquery and jquery-ui, without any particular framework was enough to create simple sliders so as to update parameters on the fly, which was my initial goal anyway.
 
-The end result is [here](http://anil.diwi.org/opencv/blob.html).
+The code is [here](https://github.com/AnilDaoud/opencv) and the end result is [here](http://anil.diwi.org/opencv/blob.html).
 
 Let me know your thoughts!
