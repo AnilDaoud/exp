@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "OpenCV tests"
+tags: experiments opencv javascript
+---
+
+I recently came across [OpenCV](https://opencv.org/), a very exciting open source Computer Vision livrary with nifty interfaces in C++, Python, Java and Matlab.
+
+There are a zillion tutorials on the Web, but i like the ones on [LearnOpenCV](https://www.learnopencv.com/) so far. I spent a bit of time on one of the first ones, [Blob Detection](https://www.learnopencv.com/blob-detection-using-opencv-python-c/). The python stuff is great but rerunning each time you change a parameter gets old really quickly.
+
+So I set out to do a quick JavasScript version, using [OpenCV.js](https://docs.opencv.org/3.4.3/d5/d10/tutorial_js_root.html).
+
+Building OpenCV.js from source is one option, butI simply went for this [download link](https://docs.opencv.org/3.4.3/opencv.js) instead.
+
+The official OpenCV.js tutorial is very useful, and so is [this page](https://scotch.io/tutorials/introduction-to-computer-vision-in-javascript-using-opencvjs) to get started.
+
+The next difficulty is that the SimpleBlobDetector function is not present in OpenCV.js... thankfully someone did a port of the C++ function in javascript. [link](https://gist.github.com/janpaul123/8b9061d1d093ec0b36dac2230434d34a).
+
+Next I needed a javascript framework. Between Angular, Bootstrap, etc. it is easy to get lost. In the end, jquery and jquery-ui, without any particular framework was enough to create simple sliders so as to update parameters on the fly, which was my initial goal anyway.
+
+The end result is [here](http://anil.diwi.org/opencv/blob.html).
+
+Let me know your thoughts!
