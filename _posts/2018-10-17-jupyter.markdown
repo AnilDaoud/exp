@@ -30,7 +30,7 @@ This creates a .jupyter directory and a jupyter_notebook_config.json file inside
 
 Then edit .jupyter/jupyter-notebook-config.py and set the following params
 
-{% highlight %}
+{% highlight python %}
 c.NotebookApp.allow_origin = '*'
 c.NotebookApp.base_url = '/jupyter'
 c.NotebookApp.certfile = '/absolute/path/to/mycert.pem'
@@ -49,7 +49,7 @@ In a SSL-enabled VirtualHost:
 
 Pay attention to the trailing slashes
 
-{% highlight %}
+{% highlight apache %}
 
     SSLCertificateFile /absolute/path/to/mycert.pem
     SSLCertificateKeyFile /absolute/path/to/mykey.key
