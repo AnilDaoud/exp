@@ -13,3 +13,5 @@ permalink: /:year/:month/:day/:title/
 tags_url: /tags
 tags_title_prefix: "Tag: "
 tags_layout: tag.html
+
+future: true
