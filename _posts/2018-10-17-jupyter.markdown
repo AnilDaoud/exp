@@ -79,6 +79,6 @@ Pay attention to the trailing slashes
 
 ## Off topic
 
-I followed the steps [here](https://sofiya.io/blog/webhooks) to automate site deployment
+I followed the steps [here](https://sofiya.io/blog/webhooks) to automate site deployment.
 
 
