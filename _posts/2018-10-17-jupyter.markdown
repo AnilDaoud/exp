@@ -1,0 +1,81 @@
+---
+layout: post
+title:  "Jupyter"
+tags: experiments jupyter apache
+---
+
+For a couple of projects I want to run I wanted to set up a Jupyter notebook server.
+
+It was surprisingly tedious to set up, so I will just make a few notes here of what I needed to do on Debian 9.
+
+## Install
+
+{% highlight console %}
+pip3 install jupyter
+{% endhighlight %}
+
+This will install jupyter in ~/.local/bin/. So need to add this to the PATH.
+
+## Setup Jupyter
+
+When running 'jupyter notebook' it will serve the notebook on locahlost:8888. Since my server is remote, this is not much help.
+In order to have Apache serve it at my.url.com/jupyter, I had first to run:
+
+{% highlight console %}
+jupyter notebook --generate-config
+jupyter notebook password
+{% endhighlight %}
+
+This creates a .jupyter directory and a jupyter_notebook_config.json file inside.
+
+Then edit .jupyter/jupyter-notebook-config.py and set the following params
+
+{% highlight %}
+c.NotebookApp.allow_origin = '*'
+c.NotebookApp.base_url = '/jupyter'
+c.NotebookApp.certfile = '/absolute/path/to/mycert.pem'
+c.NotebookApp.ip = 'localhost'
+c.NotebookApp.keyfile = '/absolute/path/to/mykey.key'
+c.NotebookApp.open_browser = False
+c.NotebookApp.password = 'paste_hashed_password_here'
+c.NotebookApp.trust_xheaders = True
+{% endhighlight %}
+
+## Set up Apache
+
+This is where it got annoying. But after a couple of hours of googling, this is what worked for me:
+
+In a SSL-enabled VirtualHost:
+
+Pay attention to the trailing slashes
+
+{% highlight %}
+
+    SSLCertificateFile /absolute/path/to/mycert.pem
+    SSLCertificateKeyFile /absolute/path/to/mykey.key
+    SSLProxyEngine On
+    SSLProxyVerify none
+    SSLProxyCheckPeerCN off
+    SSLProxyCheckPeerName off
+    SSLProxyCheckPeerExpire off
+
+    ServerName localhost
+    ProxyPreserveHost On
+    ProxyRequests Off
+
+    <Location "/jupyter">
+        ProxyPass https://localhost:8888/jupyter
+        ProxyPassReverse https://localhost:8888/jupyter
+        RequestHeader set Origin "https://localhost:8888"
+        ProxyPassReverseCookieDomain localhost mydomain.name
+    </Location>
+
+    <Location "/jupyter/api/kernels/">
+        ProxyPass wss://localhost:8888/jupyter/api/kernels/
+        ProxyPassReverse wss://localhost:8888/jupyter/api/kernels/
+    </Location>
+
+{% endhighlight %}
+
+
+
