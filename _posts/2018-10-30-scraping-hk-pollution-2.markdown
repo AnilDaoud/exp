@@ -11,7 +11,7 @@ It is surprisingly difficult to find simple charts on the web, despite pollution
 
 In this part we'll calculate the AQI using US EPA standard and display a few charts
 
-
+In the next post (?) let's try to explore the components of AQI to see where the pollution in HK comes from.
 
 Data downloaded from [HK EPD](https://cd.epic.epd.gov.hk/EPICDI/air/station/?lang=en)
 
@@ -547,7 +547,3 @@ months.boxplot(figsize=(16,6))
 ![png](/exp/assets/hkaqi/output_27_1.png)
 
 
-
-```python
-
-```
