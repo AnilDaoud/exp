@@ -213,17 +213,6 @@ aqidf = aqidf.join(aqi_series)
 dailyaqi = aqidf.iloc[:,[0,9]].groupby(['DATE']).median().copy().T.squeeze()
 aqidf.head()
 ```
-
-
-    HBox(children=(IntProgress(value=0, max=7), HTML(value='')))
-
-
-    
-
-
-
-
-
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -341,14 +330,6 @@ Let's print a few plots
 dailyaqi.plot(figsize=(16,6))
 ```
 
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x1197d0898>
-
-
-
-
 ![png](../../../../assets/hkaqi/output_12_1.png)
 
 
@@ -370,14 +351,6 @@ for name, group in groups:
 years.boxplot(figsize=(16,6))
 ```
 
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x11960f2b0>
-
-
-
-
 ![png](../../../../assets/hkaqi/output_14_1.png)
 
 
@@ -390,14 +363,6 @@ I thought it was a mistake, but then I found [this BBC News article online](http
 dailyaqi['2010'].plot(figsize=(14,6))
 ```
 
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x1198ed6a0>
-
-
-
-
 ![png](../../../../assets/hkaqi/output_16_1.png)
 
 
@@ -407,14 +372,6 @@ Enough with the old stuff, let's look at last 5 years
 ```python
 dailyaqi['2013':].plot(style='k.',figsize=(16,6))
 ```
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x11a0b30f0>
-
-
-
 
 ![png](../../../../assets/hkaqi/output_18_1.png)
 
@@ -436,20 +393,6 @@ for name, group in groups:
         raise
 years.plot(subplots=True, legend=False, figsize=(16,9))
 ```
-
-
-
-
-    array([<matplotlib.axes._subplots.AxesSubplot object at 0x11a2cb390>,
-           <matplotlib.axes._subplots.AxesSubplot object at 0x11a2f1cc0>,
-           <matplotlib.axes._subplots.AxesSubplot object at 0x11a479160>,
-           <matplotlib.axes._subplots.AxesSubplot object at 0x11a4a05c0>,
-           <matplotlib.axes._subplots.AxesSubplot object at 0x11a4c79e8>,
-           <matplotlib.axes._subplots.AxesSubplot object at 0x11a4eed68>],
-          dtype=object)
-
-
-
 
 ![png](../../../../assets/hkaqi/output_20_1.png)
 
@@ -474,14 +417,6 @@ years = years.T
 pyplot.matshow(years, interpolation=None, aspect='auto')
 ```
 
-
-
-
-    <matplotlib.image.AxesImage at 0x11a6cc710>
-
-
-
-
 ![png](../../../../assets/hkaqi/output_22_1.png)
 
 
@@ -491,14 +426,6 @@ Looks pretty weak. Let's confirm with autocorrelation:
 ```python
 pd.plotting.autocorrelation_plot(dailyaqi['2013':'2017'])
 ```
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x11ae6ee48>
-
-
-
 
 ![png](../../../../assets/hkaqi/output_24_1.png)
 
@@ -516,13 +443,6 @@ months.boxplot(figsize=(16,6))
 ```
 
 
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x11aee4080>
-
-
-
-
 ![png](../../../../assets/hkaqi/output_26_1.png)
 
 
@@ -535,13 +455,6 @@ months = pd.DataFrame(months)
 months.columns = range(1,13)
 months.boxplot(figsize=(16,6))
 ```
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x11b00ad68>
-
-
 
 
 ![png](../../../../assets/hkaqi/output_27_1.png)
