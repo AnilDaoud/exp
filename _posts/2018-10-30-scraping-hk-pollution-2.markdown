@@ -145,7 +145,7 @@ df.head()
 
 AQI with EPA calculation method requires these units:
 pm10 (µg/m³), o3_8h (ppm), co_8h (ppm), no2_1h (ppb), o3_1h (ppm), so2_1h (ppb), pm25 (µg/m³)
-[Conversion factors](https://uk-air.defra.gov.uk/exp/assets/documents/reports/cat06/0502160851_Conversion_Factors_Between_ppb_and.pdf)
+[Conversion factors](https://uk-air.defra.gov.uk../../../../assets/documents/reports/cat06/0502160851_Conversion_Factors_Between_ppb_and.pdf)
 
 
 ```python
@@ -349,7 +349,7 @@ dailyaqi.plot(figsize=(16,6))
 
 
 
-![png](/exp/assets/hkaqi/output_12_1.png)
+![png](../../../../assets/hkaqi/output_12_1.png)
 
 
 Let's try to see box plots because daily data for 20 years is not ideal.
@@ -378,7 +378,7 @@ years.boxplot(figsize=(16,6))
 
 
 
-![png](/exp/assets/hkaqi/output_14_1.png)
+![png](../../../../assets/hkaqi/output_14_1.png)
 
 
 Let's zoom in on 2010 where it looks like we have a large outlier.
@@ -398,7 +398,7 @@ dailyaqi['2010'].plot(figsize=(14,6))
 
 
 
-![png](/exp/assets/hkaqi/output_16_1.png)
+![png](../../../../assets/hkaqi/output_16_1.png)
 
 
 Enough with the old stuff, let's look at last 5 years
@@ -416,7 +416,7 @@ dailyaqi['2013':].plot(style='k.',figsize=(16,6))
 
 
 
-![png](/exp/assets/hkaqi/output_18_1.png)
+![png](../../../../assets/hkaqi/output_18_1.png)
 
 
 Is there seasonality? Let's plot last 5 years to 2018 on a stacked basis
@@ -451,7 +451,7 @@ years.plot(subplots=True, legend=False, figsize=(16,9))
 
 
 
-![png](/exp/assets/hkaqi/output_20_1.png)
+![png](../../../../assets/hkaqi/output_20_1.png)
 
 
 Not obvious, maybe with a heatmap wi'll see better?
@@ -482,7 +482,7 @@ pyplot.matshow(years, interpolation=None, aspect='auto')
 
 
 
-![png](/exp/assets/hkaqi/output_22_1.png)
+![png](../../../../assets/hkaqi/output_22_1.png)
 
 
 Looks pretty weak. Let's confirm with autocorrelation:
@@ -500,7 +500,7 @@ pd.plotting.autocorrelation_plot(dailyaqi['2013':'2017'])
 
 
 
-![png](/exp/assets/hkaqi/output_24_1.png)
+![png](../../../../assets/hkaqi/output_24_1.png)
 
 
 Still, looking at last two complete years of data with monthly box plots, it does look like June and July are less polluted than other months
@@ -523,7 +523,7 @@ months.boxplot(figsize=(16,6))
 
 
 
-![png](/exp/assets/hkaqi/output_26_1.png)
+![png](../../../../assets/hkaqi/output_26_1.png)
 
 
 
@@ -544,6 +544,6 @@ months.boxplot(figsize=(16,6))
 
 
 
-![png](/exp/assets/hkaqi/output_27_1.png)
+![png](../../../../assets/hkaqi/output_27_1.png)
 
 
