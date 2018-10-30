@@ -3,9 +3,9 @@ layout: page
 ---
 <div class="home">
         <!-- Begin blog articles -->
-            {% if site.tags.[page.filter_tag] %}
+            {% if site.tags[page.filter_tag] %}
 <ul class="posts">
-            {% for post in site.tags.[page.filter_tag] %}
+            {% for post in site.tags[page.filter_tag] %}
 
             <!-- Begin post -->
       <li>
