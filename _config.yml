@@ -2,7 +2,7 @@
 title: Experiments and experiences
 email: anil at diwi dot org
 description: "Random bits and pieces"
-baseurl: "https://anil.diwi.org/exp"
+baseurl: "/exp"
 #twitter_username: anil_daoud
 github_username:  anildaoud
 
