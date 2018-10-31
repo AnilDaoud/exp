@@ -5,7 +5,7 @@ tags: experiments jupyter HK hongkong pollution scraping selenium
 ---
 
 Pollution is a major concern in Hong Kong. How bad is it? Compared to say 5 years ago? 10 years ago?
-It is surprisingly difficult to find simple charts on the web, despite pollution data being seemingly readily available in a few places on the web.
+It is surprisingly difficult to find simple charts of long term data, despite pollution data being seemingly readily available in a few places on the web.
 
 Part 1 we'll collect some data.
 Hopefully I'll have time for part 2 in the next few days (weeks?) to actually compute the AQI and display it. 

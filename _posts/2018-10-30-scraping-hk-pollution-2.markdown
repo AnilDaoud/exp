@@ -5,15 +5,15 @@ tags: experiments jupyter HK hongkong pollution charts aqi
 ---
 
 Pollution is a major concern in Hong Kong. How bad is it? Compared to say  5 years ago? 10 years ago?
-It is surprisingly difficult to find simple charts on the web, despite pollution data being seemingly readily available in a few places on the web.
+It is surprisingly difficult to find simple long term charts, despite pollution data being seemingly readily available in a few places on the web.
 
 [Part 1](https://anil.diwi.org/exp/2018/10/28/scraping-hk-pollution-1/) we collected some data from a HK Government website.
 
 In this part we'll calculate the AQI using US EPA standard and display a few charts
 
-In the next post (?) let's try to explore the components of AQI to see where the pollution in HK comes from.
+In the next post (?) let's try to explore the components of AQI to see where the pollution in HK comes from, if holidays have any impact and what times of the day are the worst.
 
-Data downloaded from [HK EPD](https://cd.epic.epd.gov.hk/EPICDI/air/station/?lang=en)
+Data downloaded from [HK EPD](https://cd.epic.epd.gov.hk/EPICDI/air/station/?lang=en), see [Part 1](https://anil.diwi.org/exp/2018/10/28/scraping-hk-pollution-1/). We use data for Causeway Bay in this post too.
 
 [API calculation reference](https://airnow.gov/sites/default/files/2018-09/aqi-technical-assistance-document-sept-2018_0.pdf)
 
