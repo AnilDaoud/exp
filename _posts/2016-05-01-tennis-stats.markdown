@@ -7,7 +7,7 @@ tags: experiments r tennis statistics
 
 I came across [Tennis-data](http://www.tennis-data.co.uk/) while random-browsing and I thought it would make the perfect data set to experiment with [R](https://www.r-project.org/).
 
-##Step 1: data
+## Step 1: data
 
 Download all spreadsheets. Thankfully they all have the same basic structure, one line per match, same columns etc. Most of them have one sheet named the same as the file.
 
@@ -44,7 +44,7 @@ It will look something like this:
 | ...      |                    |            |               |         |           |            |             |       |       |    |    |    |    |    |    |
 | ...      |                    |            |               |         |           |            |             |       |       |    |    |    |    |    |    |
 
-##Step 2: play
+## Step 2: play
 
 Right so now we can load the data in R from the data file, instead of looping through the spreadsheets every time.
 
@@ -109,7 +109,7 @@ message("First set win means match win, and winner outranks loser?")
 displayStats(computeStats(df,"Win3"))
 {% endhighlight %}
 
-##Step 3: Now what
+## Step 3: Now what
 
 It looks like first set win means match win in ~80% of cases!
 
@@ -161,7 +161,7 @@ Is the ATP rank a better predictor? Looks like not. This looks like more of a 2 
 	======================================================
 	It took 1,397 milli-seconds to run this
 
-##Step 4: Well that was underwhelming
+## Step 4: Well that was underwhelming
 
 Who cares.
 
