@@ -55,7 +55,7 @@ suppressPackageStartupMessages(library(gdata))
 df <- readRDS(file="data/tennis.data")
 {% endhighlight %}
 
-Now that that's out of the way, this will reformat the few columns we want to pla with here:
+Now that that's out of the way, this will reformat the few columns we want to play with here:
 
 {% highlight R %}
 df$LRank <- suppressWarnings(as.integer(as.character(df$LRank)))
