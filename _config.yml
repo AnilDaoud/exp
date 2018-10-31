@@ -16,3 +16,6 @@ tags_title_prefix: "Tag: "
 tags_layout: tag.html
 
 future: true
+
+plugins:
+  - jekyll-sitemap
