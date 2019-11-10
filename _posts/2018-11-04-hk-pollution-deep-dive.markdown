@@ -11,7 +11,7 @@ It is surprisingly difficult to find simple long term charts, despite pollution 
 
 [Part 2](https://anil.diwi.org/exp/2018/10/30/scraping-hk-pollution-2/) we calculated the AQI manually.
 
-In this let's try to explore the components of AQI to see where the pollution in HK comes from, if there is any seasonality in the data, if holidays have any impact and what times of the day are the worst.
+In this let's try to explore the components of AQI to see where the pollution in HK comes from, if there is any obvious seasonality in the data, if holidays have any impact and what times of the day are the worst.
 
 Data downloaded from [HK EPD](https://cd.epic.epd.gov.hk/EPICDI/air/station/?lang=en), see [Part 1](https://anil.diwi.org/exp/2018/10/28/scraping-hk-pollution-1/).
 
@@ -33,7 +33,7 @@ import pandas as pd
 import os
 ```
 
-Let's get the data from CSV
+Let's get the data from our previously saved CSV (see previous posts)
 
 ```python
 folder = 'central-western'
@@ -57,9 +57,9 @@ dailyaqi.plot(figsize=(16,6))
 ![png](../../../../assets/hkaqi/output_4_1.png)
 
 
-There seems to be a change in regine around 2011, 2012.
+There seems to be a change in regime around 2011, 2012.
 
-Let's try to pin down if this is due to a change in underlying AQI driver.
+Let's try to pin down if this is due to a change in underlying AQI component.
 
 
 ```python
@@ -78,7 +78,7 @@ aqi_origins.plot.bar(stacked=True,figsize=(16,8))
 ![png](../../../../assets/hkaqi/output_6_1.png)
 
 
-Indeed, from before 1993 the main driver of AQI was NO2.
+Indeed, before 1993 the main driver of AQI was NO2.
 
 Between 1994 and 2011, it was PM10.
 
@@ -102,7 +102,7 @@ groupstack.boxplot(figsize=(16,6))
 
 Let's zoom in on 2010 where it looks like we have a large outlier.
 
-I thought it was a mistake, but then I found [this BBC News article online](http://news.bbc.co.uk/2/hi/asia-pacific/8579495.stm)
+I thought it was a mistake at first, but then I found [this BBC News article online](http://news.bbc.co.uk/2/hi/asia-pacific/8579495.stm)
 
 
 ```python
@@ -112,7 +112,7 @@ dailyaqi['2010'].plot(figsize=(14,6))
 ![png](../../../../assets/hkaqi/output_10_1.png)
 
 
-Enough with the old stuff, let's look at last 5 years
+Enough with the old stuff, let's look at the last 5 years
 
 
 ```python
@@ -122,7 +122,7 @@ dailyaqi['2013':].plot(style='k.',figsize=(16,6))
 ![png](../../../../assets/hkaqi/output_12_1.png)
 
 
-Is there seasonality? Let's plot last 5 years to 2018 on a stacked basis
+Is there seasonality? Let's plot the last 5 years to 2018 on a stacked basis
 
 
 ```python
@@ -147,7 +147,7 @@ years.plot(subplots=True, legend=False, figsize=(16,9))
 ![png](../../../../assets/hkaqi/output_14_2.png)
 
 
-Not obvious, maybe with a heatmap wi'll see better?
+Not obvious, maybe with a heatmap we will see better?
 
 
 ```python
@@ -170,7 +170,7 @@ pyplot.matshow(years, interpolation=None, aspect='auto')
 ![png](../../../../assets/hkaqi/output_16_1.png)
 
 
-So looks like weaker numbers around the middle of the year. Let's plot weekly boxes for last two years:
+So it looks like weaker numbers around the middle of the year, higher pollution around year end. Let's plot weekly boxes for last two years:
 
 
 ```python

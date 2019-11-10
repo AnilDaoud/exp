@@ -177,7 +177,7 @@ if not data_ready:
     del df['CO']
 ```
 
-Let's define a two helper structures to match our data set with the constants from python-aqi
+Let's define two helper structures to match our data set with the constants from python-aqi
 
 
 ```python
@@ -198,7 +198,7 @@ caps = {'CO_8h': 50.4,
         'O3_8h' : 0.374}
 ```
 
-Now we can apply AQI calculation on our DataFrame
+Now we can apply AQI calculations on our DataFrame
 
 
 ```python
@@ -325,7 +325,7 @@ aqidf.head()
 
 
 
-And we can save the resulting timeseries in nice CSV form for later use
+And we can save the resulting timeseries in nice CSV format for later use
 
 
 ```python
