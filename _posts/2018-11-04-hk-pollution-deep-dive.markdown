@@ -249,5 +249,4 @@ groupstack.boxplot(figsize=(16,6))
 ![png](../../../../assets/hkaqi/output_26_1.png)
 
 
-Saturday and Sundays are when pollution is the highest?
-Maybe i'm doing something wrong...
+No clear pattern here either

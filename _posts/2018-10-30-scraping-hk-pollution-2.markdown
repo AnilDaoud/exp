@@ -53,7 +53,10 @@ else:
     df = pd.concat(dfs, ignore_index=True)
     del df['NOX']
     del df['STATION']
-df.DATE = pd.to_datetime(df.DATE, format="%Y-%m-%d")
+if data_ready:
+    df.DATE = pd.to_datetime(df.DATE, format="%Y-%m-%d")
+else:
+    df.DATE = pd.to_datetime(df.DATE, format="%d/%m/%Y")
 df.iloc[:,2:] = df.iloc[:,2:].apply(pd.to_numeric, errors='coerce')
 df.head()
 ```
@@ -330,7 +333,7 @@ And we can save the resulting timeseries in nice CSV format for later use
 
 ```python
 if not data_ready:
-    dailyaqi.to_csv('aqi_daily.csv')
-    aqidf.to_csv('aqi_hourly_full.csv')
+    dailyaqi.to_csv(folder + '/aqi_daily.csv')
+    aqidf.to_csv(folder + '/aqi_hourly_full.csv')
 ```
 
