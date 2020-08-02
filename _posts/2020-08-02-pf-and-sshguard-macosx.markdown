@@ -1,11 +1,10 @@
 ---
 layout: post
-title: "PF and SSHGuard on Mac OS X"
-date: 2020-08-02 21:28:27
+title:  "PF and SSHGuard on Mac OS X"
 tags: experiments pf sshguard macosx
 ---
 
-All tested on Catalina (10.15.6) in August 2020
+Quick memo about setting up PF and SSHGuard on Mac OS X, all tested on Catalina (10.15.6) in August 2020.
 
 # PF on Mac OS X
 
@@ -90,6 +89,4 @@ See it in action:
 ```sh
 sudo pfctl -T show -t sshguard
 ```
-
-
 
