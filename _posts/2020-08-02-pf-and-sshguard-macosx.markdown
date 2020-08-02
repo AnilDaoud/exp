@@ -1,7 +1,7 @@
 ---
 layout: post
-title: PF and SSHGuard on Mac OS X
-date:   2020-08-02 21:28:27
+title: "PF and SSHGuard on Mac OS X"
+date: 2020-08-02 21:28:27
 tags: experiments pf sshguard macosx
 ---
 
