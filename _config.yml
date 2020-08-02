@@ -17,5 +17,7 @@ tags_layout: tag.html
 
 future: true
 
+excerpt_separator: "<!--break-->"
+
 plugins:
   - jekyll-sitemap
