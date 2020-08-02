@@ -6,7 +6,7 @@ tags: experiments pf sshguard macosx
 
 Quick memo about setting up PF and SSHGuard on Mac OS X, all tested on Catalina (10.15.6) in August 2020.
 
-# PF on Mac OS X
+## PF on Mac OS X
 
 The reference article online is [here](https://manjusri.ucsc.edu/2015/03/10/PF-on-Mac-OS-X/)
 
@@ -28,7 +28,7 @@ Reload /etc/pf.conf:
 $ sudo pfctl -f /etc/pf.conf
 ```
 
-# Protecting SSHD without SSHGuard
+## Protecting SSHD without SSHGuard
 
 Append the following lines to /etc/pf.conf (see [Section 30.3.3.5 - Using Overload Tables to Protect SSH](https://www.freebsd.org/doc/handbook/firewalls-pf.html) of FreeBSD Handbook for an explanation):
 
@@ -52,7 +52,7 @@ $ sudo pfctl -t bruteforce -T expire 86400
 
 Then you can automate this command daily in a cronjob or in a timed job. Or you can use SSHGuard
 
-# Protecting SSHD with SSHGuard
+## Protecting SSHD with SSHGuard
 
 Reference article [here](https://smallthingsfloat.com/2013/08/09/configure-sshguard-for-os-x-10-8/)
 
