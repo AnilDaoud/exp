@@ -31,6 +31,30 @@ Reload /etc/pf.conf:
 $ sudo pfctl -f /etc/pf.conf
 ```
 
+Pfctl is registered at boot in /System/Library/LaunchDaemons/com.apple.pfctl.plist. It is missing the -E option mentioned above. But this file is protected by System Integrity Protection in recent Mac OS X versions.
+
+In order to have pfctl start at boot, if you don't want to mess about disabling SIP, you can simply copy the existing file /System/Library/LaunchDaemons/com.apple.pfctl.plist to the unprotected user area /Library/LaunchDaemons giving it a slightly different name eg. /Library/LaunchDaemons/my.netfilter.pfctl.plist and add the -E string.
+
+ ```xml
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key> <string>my.netfilter.pfctl</string>
+    <key>Disabled</key> <false/>
+    <key>RunAtLoad</key> <true/>
+    <key>WorkingDirectory</key> <string>/var/run</string>
+    <key>Program</key> <string>/sbin/pfctl</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>pfctl</string>
+        <string>-E</string>
+        <string>-f</string>
+        <string>/etc/pf.conf</string>
+    </array>
+</dict>
+</plist>
+ ```
+
 ## Protecting SSHD without SSHGuard
 
 Append the following lines to /etc/pf.conf (see [Section 30.3.3.5 - Using Overload Tables to Protect SSH](https://www.freebsd.org/doc/handbook/firewalls-pf.html) of FreeBSD Handbook for an explanation):
