@@ -5,6 +5,7 @@ tags: experiments pf sshguard macosx
 ---
 
 Quick memo about setting up PF and SSHGuard on Mac OS X, all tested on Catalina (10.15.6) in August 2020.
+This is mostly for me to have all the info in one place.
 
 ## PF on Mac OS X
 
