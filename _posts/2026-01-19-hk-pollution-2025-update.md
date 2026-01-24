@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hong Kong Pollution Data - 2025 Update"
-date: 2025-01-19
+date: 2026-01-19
 tags: experiments jupyter HK hongkong pollution charts aqi python
 ---
 
