@@ -5,7 +5,7 @@ date: 2025-01-19
 tags: experiments jupyter HK hongkong pollution charts aqi python
 ---
 
-It's been over 6 years since my [original analysis of Hong Kong pollution data](https://anil.diwi.org/exp/2018/11/04/hk-pollution-deep-dive/). Time for an update! Has air quality improved? What trends can we observe now with almost 27 years of data (1998-2025)?
+It's been over 8 years since my [original analysis of Hong Kong pollution data](https://anil.diwi.org/exp/2018/11/04/hk-pollution-deep-dive/). Time for an update! Has air quality improved? What trends can we observe now with almost 27 years of data (1998-2025)?
 
 In this post, we'll:
 1. Update the scraping tool to work with the current EPD website
